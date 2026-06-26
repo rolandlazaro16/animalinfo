@@ -32,7 +32,7 @@ export default function Dashboard() {
 
   const fetchStats = async () => {
     try {
-      const res = await fetch('/api/stats');
+      const res = await fetch('https://animalinfo.onrender.com/api/stats');
       const data = await res.json();
       if (data.success) {
         setStats(data.data);
@@ -51,7 +51,7 @@ export default function Dashboard() {
   const handleSeed = async () => {
     setSeeding(true);
     try {
-      const res = await fetch('/api/seed', { method: 'POST' });
+      const res = await fetch('https://animalinfo.onrender.com/api/seed', { method: 'POST' });
       const data = await res.json();
       if (data.success) {
         showToast(`Database seeded: ${data.message}`);

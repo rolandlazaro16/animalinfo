@@ -34,7 +34,7 @@ export default function FeedbackPage() {
       if (severity) params.set('severity', severity);
       if (status) params.set('status', status);
 
-      const res = await fetch(`/api/feedback?${params.toString()}`);
+      const res = await fetch(`https://animalinfo.onrender.com/api/feedback?${params.toString()}`);
       const data = await res.json();
       if (data.success) setFeedback(data.data);
     } catch (error) {

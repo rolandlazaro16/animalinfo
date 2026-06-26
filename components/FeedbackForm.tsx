@@ -28,7 +28,7 @@ export default function FeedbackForm() {
   });
 
   useEffect(() => {
-    fetch('/api/animals')
+    fetch('https://animalinfo.onrender.com/api/animals')
       .then((res) => res.json())
       .then((data) => {
         if (data.success) setAnimals(data.data);
@@ -67,7 +67,7 @@ export default function FeedbackForm() {
 
     setLoading(true);
     try {
-      const res = await fetch('/api/feedback', {
+      const res = await fetch('https://animalinfo.onrender.com/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

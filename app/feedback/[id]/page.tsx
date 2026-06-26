@@ -31,7 +31,7 @@ export default function FeedbackDetailPage() {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const res = await fetch(`/api/feedback/${params.id}`);
+        const res = await fetch(`https://animalinfo.onrender.com/api/feedback/${params.id}`);
         const data = await res.json();
         if (data.success) {
           setFeedback(data.data);
@@ -47,7 +47,7 @@ export default function FeedbackDetailPage() {
 
   const handleStatusChange = async (newStatus: string) => {
     try {
-      const res = await fetch(`/api/feedback/${params.id}`, {
+      const res = await fetch(`https://animalinfo.onrender.com/api/feedback/${params.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: newStatus }),
@@ -65,7 +65,7 @@ export default function FeedbackDetailPage() {
   const handleDelete = async () => {
     if (!confirm('Are you sure you want to delete this feedback?')) return;
     try {
-      const res = await fetch(`/api/feedback/${params.id}`, { method: 'DELETE' });
+      const res = await fetch(`https://animalinfo.onrender.com/api/feedback/${params.id}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
         showToast('Feedback deleted');
