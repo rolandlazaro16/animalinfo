@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from 'next/server';
-import { dbConnect } from '@/lib/mongodb';
-import Animal from '@/lib/models/Animal';
+import { dbConnect } from '@/backend/mongodb';
+import Animal from '@/backend/models/Animal';
 
 export async function GET(
   _request: NextRequest,

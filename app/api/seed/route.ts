@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
-import { dbConnect } from '@/lib/mongodb';
-import Animal from '@/lib/models/Animal';
-import Feedback from '@/lib/models/Feedback';
+import { dbConnect } from '@/backend/mongodb';
+import Animal from '@/backend/models/Animal';
+import Feedback from '@/backend/models/Feedback';
 
 const seedAnimals = [
   {

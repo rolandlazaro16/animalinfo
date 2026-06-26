@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from 'next/server';
-import { dbConnect } from '@/lib/mongodb';
-import Feedback from '@/lib/models/Feedback';
+import { dbConnect } from '@/backend/mongodb';
+import Feedback from '@/backend/models/Feedback';
 
 export async function GET(request: NextRequest) {
   try {
