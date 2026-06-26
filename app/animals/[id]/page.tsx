@@ -59,8 +59,8 @@ export default function AnimalDetailPage() {
     const fetchData = async () => {
       try {
         const [animalRes, feedbackRes] = await Promise.all([
-          fetch(`https://animalinfo.onrender.com/api/animals/${params.id}`),
-          fetch(`https://animalinfo.onrender.com/api/feedback?animalId=${params.id}`),
+          fetch(`/api/animals/${params.id}`),
+          fetch(`/api/feedback?animalId=${params.id}`),
         ]);
 
         const animalData = await animalRes.json();

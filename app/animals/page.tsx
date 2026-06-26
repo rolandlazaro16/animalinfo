@@ -28,7 +28,7 @@ export default function AnimalsPage() {
       if (search) params.set('search', search);
       if (status) params.set('status', status);
 
-      const res = await fetch(`https://animalinfo.onrender.com/api/animals?${params.toString()}`);
+      const res = await fetch(`/api/animals?${params.toString()}`);
       const data = await res.json();
       if (data.success) setAnimals(data.data);
     } catch (error) {
