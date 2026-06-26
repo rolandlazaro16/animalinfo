@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+
+export const dynamic = 'force-dynamic';
 import { dbConnect } from '@/lib/mongodb';
 import Animal from '@/lib/models/Animal';
 import Feedback from '@/lib/models/Feedback';
